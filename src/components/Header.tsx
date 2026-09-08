@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { hospital } from "../config/data";
 import type { User } from "../config/data";
+import hospitalLogo from "../../assets/logo.jpeg";
 
 interface HeaderProps {
   user: User | null;
@@ -29,9 +30,12 @@ export default function Header({ user, onNavigate, onLogin, onLogout, currentPag
             className="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded"
             aria-label={`${hospital.name} — Home`}
           >
-            <span className="flex items-center justify-center w-8 h-8 rounded bg-white/10 border border-white/20 font-display font-bold text-sm select-none" aria-hidden="true">
-              LBH
-            </span>
+            <img
+              src={hospitalLogo}
+              alt=""
+              className="w-9 h-9 rounded-full bg-white object-contain p-0.5 select-none"
+              aria-hidden="true"
+            />
             <div className="hidden sm:block">
               <p className="font-display font-bold text-white text-sm leading-tight">{hospital.name}</p>
               <p className="text-lbh-300 text-xs leading-tight">{hospital.unit}</p>

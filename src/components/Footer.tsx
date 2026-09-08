@@ -1,4 +1,5 @@
 import { hospital, platform } from "../config/data";
+import hospitalLogo from "../../assets/logo.jpeg";
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -12,7 +13,12 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-6 h-6 rounded bg-lbh-800 text-white font-display font-bold text-xs flex items-center justify-center" aria-hidden="true">LBH</span>
+              <img
+                src={hospitalLogo}
+                alt=""
+                className="w-7 h-7 rounded-full bg-white object-contain p-0.5"
+                aria-hidden="true"
+              />
               <p className="font-display font-semibold text-white text-sm">{hospital.shortName} Hemodialysis</p>
             </div>
             <p className="text-xs leading-relaxed">{hospital.address}</p>
