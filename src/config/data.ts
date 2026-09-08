@@ -4,10 +4,10 @@ export const hospital = {
   name: "Leyte Baptist Hospital",
   unit: "Hemodialysis Unit",
   shortName: "LBH",
-  address: "Gov. A.D. Curato St., Tacloban City, Leyte 6500",
-  phone: "+63 53 321 2000",
+  address: "R.V. Fulache Street Hilongos, Leyte, Hilongos 6524",
+  phone: "+63 953 108 1887",
   fax: "+63 53 321 2002",
-  email: "hdu@lbh.ph",
+  email: "lbhihr01@gmail.com",
   website: "lbh.ph",
   hours: "Monday to Saturday, 6:00 AM – 9:00 PM",
   emergencyPhone: "+63 53 321 2001",
@@ -17,7 +17,7 @@ export const hospital = {
 
 // Powered-by signature
 export const platform = {
-  name: "NephroBook",
+  name: "TATS Solutions",
   tagline: "Dialysis scheduling platform",
 };
 
@@ -66,7 +66,7 @@ export const demoUsers: { email: string; password: string; user: User }[] = [
   {
     email: "patient@lbh.ph",
     password: "demo123",
-    user: { id: "U-001", name: "Rolf Garces", role: "patient", email: "patient@lbh.ph", patientId: "P-001" },
+    user: { id: "U-001", name: "Juan Reyes", role: "patient", email: "patient@lbh.ph", patientId: "P-001" },
   },
   {
     email: "maria@lbh.ph",
@@ -105,7 +105,7 @@ export interface Patient {
 }
 
 export const patients: Patient[] = [
-  { id: "P-001", name: "Rolf Garces", dob: "1960-03-15", age: 66, phone: "09171234567", email: "rolf.garces@email.com", address: "Magsaysay Blvd, Tacloban City", emergencyContact: "Lisa Garces", emergencyPhone: "09179876543", status: "active", since: "Jan 2024", frequency: "3x per week", shift: "S1", machine: "HD-01" },
+  { id: "P-001", name: "Juan Reyes", dob: "1960-03-15", age: 66, phone: "09171234567", email: "rolf.garces@email.com", address: "Magsaysay Blvd, Tacloban City", emergencyContact: "Lisa Garces", emergencyPhone: "09179876543", status: "active", since: "Jan 2024", frequency: "3x per week", shift: "S1", machine: "HD-01" },
   { id: "P-002", name: "Maria Santos", dob: "1965-07-22", age: 61, phone: "09176543210", email: "maria.santos@email.com", address: "Gomez St., Tacloban City", emergencyContact: "Pedro Santos", emergencyPhone: "09172345678", status: "active", since: "Mar 2023", frequency: "3x per week", shift: "S1", machine: "HD-02" },
   { id: "P-003", name: "Juan Dela Cruz", dob: "1958-11-08", age: 67, phone: "09181234567", email: "juan.delacruz@email.com", address: "P. Burgos St., Tacloban City", emergencyContact: "Ana Dela Cruz", emergencyPhone: "09185678901", status: "active", since: "Jun 2022", frequency: "3x per week", shift: "S1", machine: "HD-03" },
   { id: "P-004", name: "Elena Manalo", dob: "1970-05-14", age: 56, phone: "09192345678", email: "elena.manalo@email.com", address: "Real St., Tacloban City", emergencyContact: "Carlo Manalo", emergencyPhone: "09198765432", status: "active", since: "Sep 2023", frequency: "3x per week", shift: "S2", machine: "HD-04" },
@@ -138,7 +138,7 @@ const TODAY = "2026-09-08";
 
 export const appointments: Appointment[] = [
   // Today - S1 (6-10 AM)
-  { id: "A001", confirmationNumber: "LBH-HD-090801", patientId: "P-001", patientName: "Rolf Garces", date: TODAY, shiftId: "S1", machineId: "HD-01", status: "checked-in", createdAt: "2026-09-05", checkedInAt: "5:52 AM" },
+  { id: "A001", confirmationNumber: "LBH-HD-090801", patientId: "P-001", patientName: "Juan Reyes", date: TODAY, shiftId: "S1", machineId: "HD-01", status: "checked-in", createdAt: "2026-09-05", checkedInAt: "5:52 AM" },
   { id: "A002", confirmationNumber: "LBH-HD-090802", patientId: "P-002", patientName: "Maria Santos", date: TODAY, shiftId: "S1", machineId: "HD-02", status: "checked-in", createdAt: "2026-09-05", checkedInAt: "5:58 AM" },
   { id: "A003", confirmationNumber: "LBH-HD-090803", patientId: "P-003", patientName: "Juan Dela Cruz", date: TODAY, shiftId: "S1", machineId: "HD-03", status: "confirmed", createdAt: "2026-09-05" },
   // Today - S2 (10 AM - 2 PM)
@@ -149,14 +149,14 @@ export const appointments: Appointment[] = [
   { id: "A007", confirmationNumber: "LBH-HD-090807", patientId: "P-007", patientName: "Antonio Bernabe", date: TODAY, shiftId: "S3", machineId: "HD-07", status: "confirmed", createdAt: "2026-09-05" },
   { id: "A008", confirmationNumber: "LBH-HD-090808", patientId: "P-008", patientName: "Lourdes Castillo", date: TODAY, shiftId: "S3", machineId: "HD-08", status: "confirmed", createdAt: "2026-09-05" },
   // Upcoming - Sep 10
-  { id: "A009", confirmationNumber: "LBH-HD-091001", patientId: "P-001", patientName: "Rolf Garces", date: "2026-09-10", shiftId: "S1", machineId: "HD-01", status: "confirmed", createdAt: "2026-09-07" },
+  { id: "A009", confirmationNumber: "LBH-HD-091001", patientId: "P-001", patientName: "Juan Reyes", date: "2026-09-10", shiftId: "S1", machineId: "HD-01", status: "confirmed", createdAt: "2026-09-07" },
   { id: "A010", confirmationNumber: "LBH-HD-091002", patientId: "P-002", patientName: "Maria Santos", date: "2026-09-10", shiftId: "S1", machineId: "HD-02", status: "confirmed", createdAt: "2026-09-07" },
   { id: "A011", confirmationNumber: "LBH-HD-091003", patientId: "P-003", patientName: "Juan Dela Cruz", date: "2026-09-10", shiftId: "S1", machineId: "HD-03", status: "confirmed", createdAt: "2026-09-07" },
   // Upcoming - Sep 12
-  { id: "A012", confirmationNumber: "LBH-HD-091201", patientId: "P-001", patientName: "Rolf Garces", date: "2026-09-12", shiftId: "S1", machineId: "HD-01", status: "confirmed", createdAt: "2026-09-07" },
+  { id: "A012", confirmationNumber: "LBH-HD-091201", patientId: "P-001", patientName: "Juan Reyes", date: "2026-09-12", shiftId: "S1", machineId: "HD-01", status: "confirmed", createdAt: "2026-09-07" },
   // Past
-  { id: "A013", confirmationNumber: "LBH-HD-090301", patientId: "P-001", patientName: "Rolf Garces", date: "2026-09-03", shiftId: "S1", machineId: "HD-01", status: "completed", createdAt: "2026-09-01" },
-  { id: "A014", confirmationNumber: "LBH-HD-090501", patientId: "P-001", patientName: "Rolf Garces", date: "2026-09-05", shiftId: "S1", machineId: "HD-01", status: "completed", createdAt: "2026-09-02" },
+  { id: "A013", confirmationNumber: "LBH-HD-090301", patientId: "P-001", patientName: "Juan Reyes", date: "2026-09-03", shiftId: "S1", machineId: "HD-01", status: "completed", createdAt: "2026-09-01" },
+  { id: "A014", confirmationNumber: "LBH-HD-090501", patientId: "P-001", patientName: "Juan Reyes", date: "2026-09-05", shiftId: "S1", machineId: "HD-01", status: "completed", createdAt: "2026-09-02" },
   { id: "A015", confirmationNumber: "LBH-HD-090601", patientId: "P-002", patientName: "Maria Santos", date: "2026-09-06", shiftId: "S1", machineId: "HD-02", status: "cancelled", createdAt: "2026-09-03" },
 ];
 

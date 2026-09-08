@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { hospital, faqs, preparationInstructions } from "../config/data";
+import hospitalExterior from "../../assets/lbh.jpeg";
 
 interface PublicHomePageProps {
   onBook: () => void;
@@ -38,8 +39,14 @@ export default function PublicHomePage({ onBook, onLogin, activePage }: PublicHo
   return (
     <main>
       {/* Hero */}
-      <section className="bg-lbh-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+      <section className="relative isolate overflow-hidden bg-lbh-900 text-white">
+        <img
+          src={hospitalExterior}
+          alt="Leyte Baptist Hospital exterior"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-50"
+        />
+        <div className="absolute inset-0 -z-10 bg-lbh-900/65" aria-hidden="true" />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
           <div className="max-w-2xl">
             <p className="text-lbh-300 text-sm font-semibold font-display uppercase tracking-wider mb-3">
               {hospital.unit}

@@ -37,7 +37,7 @@ export default function LoginPage({ onLogin, onBack }: LoginPageProps) {
 
   const hints =
     tab === "patient"
-      ? [{ email: "patient@lbh.ph", label: "Patient (Rolf Garces)" }]
+      ? [{ email: "patient@lbh.ph", label: "Patient (Juan Reyes)" }]
       : [
           { email: "staff@lbh.ph", label: "Staff (Nurse Ana)" },
           { email: "admin@lbh.ph", label: "Admin (Dr. Bautista)" },
