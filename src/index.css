@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Leyte Baptist Hospital — institutional deep blue */
+  --color-lbh-50:  #eff5ff;
+  --color-lbh-100: #dce7fe;
+  --color-lbh-200: #c0d2fd;
+  --color-lbh-300: #93b2fb;
+  --color-lbh-400: #6089f7;
+  --color-lbh-500: #3c62f1;
+  --color-lbh-600: #2848e6;
+  --color-lbh-700: #2038d3;
+  --color-lbh-800: #1f30ab;  /* primary CTA */
+  --color-lbh-900: #1e2d82;  /* header, dark surfaces */
+  --color-lbh-950: #141c52;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*:hover {
+  scrollbar-width: thin;
+}
+
+*:hover::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+  height: 4px;
+}
+
+*:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in   { animation: fadeIn  0.22s ease-out both; }
+.animate-scale-in  { animation: scaleIn 0.2s  ease-out both; }
+.animate-slide-in  { animation: slideLeft 0.22s ease-out both; }
